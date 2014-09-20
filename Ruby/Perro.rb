@@ -2,7 +2,6 @@ require './Mascota'
 
 module Veterinaria
     class Perro < Mascota
-        include Veterinaria
         def initialize tamanho, nombre, edad
             @tamanho = tamanho
             super nombre, edad
