@@ -1,8 +1,8 @@
-require './Perro'
-require './Gato'
-require './Ave'
-require './Reptil'
-require './Cliente'
+require './Veterinaria'
+#require './Gato'
+#require './Ave'
+#require './Reptil'
+#require './Cliente'
 
 perro = Veterinaria::Perro.new "Chico", "Rambo", 2
 #puts perro.presentarse()
