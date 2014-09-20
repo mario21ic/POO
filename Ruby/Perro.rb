@@ -1,7 +1,7 @@
 require './Mascota'
 
 module Veterinaria
-    class Perro < Veterinaria::Mascota
+    class Perro < Mascota
         include Veterinaria
         def initialize tamanho, nombre, edad
             @tamanho = tamanho
@@ -17,8 +17,7 @@ module Veterinaria
         end
 
         def presentarse
-            super
-            "perro"
+            super + "perro"
         end
     end
 end
