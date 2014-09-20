@@ -1,7 +1,5 @@
 <?php
 
-namespace Veterinaria;
-
 abstract class Mascota {
     protected $nombre;
     private $edad;
@@ -15,6 +13,6 @@ abstract class Mascota {
     abstract public function comunicarse();
 
     public function presentarse() {
-        return "Me llamo " . $this->nombre + " soy un  ";
+        return "Me llamo " . $this->nombre . " soy un ";
     }
 }

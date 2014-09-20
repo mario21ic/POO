@@ -1,8 +1,6 @@
 <?php
 
-namespace Veterinaria;
-
-#include 'Mascota.php';
+require_once 'Mascota.php';
 
 class Cliente {
     private $nombre;
@@ -12,15 +10,14 @@ class Cliente {
         $this->nombre = $nombre;
     }
 
-    public function agregarMascota(Mascota $mascota) {
+    public function agregarMascota($mascota) {
         $this->mascotas[] = $mascota;
     }
 
     public function reporteMascotas() {
         $mensaje = "";
         foreach ($this->mascotas as $mascota) {
-            $mensaje += mascota.presentarse();
-            $mensaje += "\n";
+            $mensaje = $mensaje . $mascota->presentarse() . "\n";
         }
         return $mensaje;
     }

@@ -1,15 +1,13 @@
 <?php
 
-namespace Veterinaria;
-
-use Mascota;
+require_once 'Mascota.php';
 
 class Perro extends Mascota {
 
     private $tamanho;
 
     public function __construct($tamanho, $nombre, $edad) {
-        parent::__contruct($nombre, $edad);
+        parent::__construct($nombre, $edad);
         $this->tamanho = $tamanho;
     }
 
@@ -22,6 +20,6 @@ class Perro extends Mascota {
     }
 
     public function presentarse() {
-        return parent::presentarse() . " perro";
+        return parent::presentarse() . "perro";
     }
 }
