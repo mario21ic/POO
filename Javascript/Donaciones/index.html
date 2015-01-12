@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Donaciones</title>
+    <script type="text/javascript" src="Administrador.js"></script>
+    <script type="text/javascript" src="Donante.js"></script>
+</head>
+<script type="text/javascript">
+    admin = new Administrador();
+    mario = new Donante('Mario JIC', '44489174', '942943937', 'mario21ic@gmail.com', 23);
+    josue = new Donante('Josue Barrios', '44489173', '942943936', 'josue@gmail.com', 25);
+    franco = new Donante('Franco I', '44489172', '942943935', 'franco@gmail.com', 20);
+    admin.agregar_donante(mario);
+    admin.agregar_donante(josue);
+    admin.agregar_donante(franco);
+    console.assert(admin.monto_total() === 68, 'Monto total debe ser 68');
+    console.assert(admin.donante_top() == josue, 'Debe ser josue');
+    console.assert(admin.buscar_donante('44489174') === mario, 'Debe ser mario');
+    console.assert(admin.monto_promedio() === 22.666666666666668, 'Debe ser 22.666666666666668');
+</script>
+<body>
+</body>
+</html>
