@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Transacciones</title>
+    <script type="text/javascript" src="Empresa.js"></script>
+</head>
+<script type="text/javascript">
+    var empresa = new Empresa("UPC", "333666777");
+
+    empresa.registrar_pasos(1);
+    console.assert(empresa.calcular_pago() === 500, 'Pasos 1, debe ser 500');
+
+    empresa.registrar_pasos(1000);
+    console.assert(empresa.calcular_pago() === 500, 'Pasos 1000, debe ser 500');
+
+    empresa.registrar_pasos(1001);
+    console.assert(empresa.calcular_pago() === 520, 'Pasos 1001, debe ser 520');
+
+    empresa.registrar_pasos(1101);
+    console.assert(empresa.calcular_pago() === 540, 'Pasos 1101, debe ser 540');
+</script>
+<body>
+</body>
+</html>
